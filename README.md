@@ -19,8 +19,11 @@ A modern Android application built with **Jetpack Compose**, following **Clean A
 ## 🧱 Project Structure
 app/
 ├── di/ # Hilt modules and DI setup
+
 ├── presentation/ # UI, ViewModels, and navigation
+
 ├── domain/ # Use cases and domain models
+
 └── data/ # Repositories and data sources
 ---
 
@@ -60,7 +63,7 @@ app/
 ## 📷 Screenshots
 
 ![Main Screen](screenshots/main_screen.png)
-![Scan QR Code Screen](screenshots/scan_qr_code_scren.png)
+![Scan QR Code Screen](screenshots/scan_qr_code_screen.png)
 ![Code Scanning](screenshots/code_scanning.png)
 ![Generate QR Code Screen](screenshots/generate_qr_code_screen.png)
 ![Saving QR Code Into Gallery](screenshots/saving_qr_into_gallery.png)
