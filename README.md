@@ -64,15 +64,7 @@ app/
 
 ## 📷 Screenshots
 
-![Main Screen](screenshots/main_screen.png)
 
-![Scan QR Code Screen](screenshots/scan_qr_code_screen.png)
-
-![Code Scanning](screenshots/code_scanning.png)
-
-![Generate QR Code Screen](screenshots/generate_qr_code_screen.png)
-
-![Saving QR Code Into Gallery](screenshots/saving_qr_into_gallery.png)
 
 ---
 
