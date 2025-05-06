@@ -18,6 +18,7 @@ A modern Android application built with **Jetpack Compose**, following **Clean A
 
 ## 🧱 Project Structure
 app/
+
 ├── di/ # Hilt modules and DI setup
 
 ├── presentation/ # UI, ViewModels, and navigation
@@ -25,6 +26,7 @@ app/
 ├── domain/ # Use cases and domain models
 
 └── data/ # Repositories and data sources
+
 ---
 
 ## 🛠 Tech Stack
