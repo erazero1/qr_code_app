@@ -6,6 +6,8 @@
         android:name="android.hardware.camera"
         android:required="true" />
     <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <application
         android:name=".di.MyApp"
         android:allowBackup="true"
@@ -36,7 +38,7 @@
 
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="your.package.name.fileprovider"
+            android:authorities="com.erazero1.qrcodeapp.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true">
             <meta-data

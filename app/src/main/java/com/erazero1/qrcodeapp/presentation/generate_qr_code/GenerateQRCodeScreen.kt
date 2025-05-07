@@ -2,6 +2,8 @@ package com.erazero1.qrcodeapp.presentation.generate_qr_code
 
 import android.widget.Toast
 import androidx.compose.foundation.Image
+import androidx.compose.foundation.gestures.Orientation
+import androidx.compose.foundation.gestures.scrollable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -9,7 +11,9 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Button
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Scaffold
@@ -55,6 +59,7 @@ fun GenerateQRCodeScreen(
         Column(
             modifier = Modifier
                 .padding(innerPadding)
+                .verticalScroll(rememberScrollState())
         ) {
             Text(
                 "Enter your prompt",
@@ -62,6 +67,7 @@ fun GenerateQRCodeScreen(
                 fontSize = 20.sp,
                 modifier = Modifier.padding(start = 32.dp, top = 24.dp, bottom = 16.dp)
             )
+            val maxCharactersInTextField = 256
             TextField(
                 value = inputText,
                 colors = TextFieldDefaults.colors(
@@ -80,14 +86,13 @@ fun GenerateQRCodeScreen(
                     .fillMaxWidth()
                     .padding(horizontal = 32.dp),
                 onValueChange = {
-                    inputText = it
+                    if(it.length <= maxCharactersInTextField) inputText = it
                 },
             )
 
             Button(
                 onClick = {
                     viewModel.generateQRCode(inputText)
-                    viewModel.updateImage()
                 },
                 shape = RoundedCornerShape(12.dp),
                 modifier = Modifier
